@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}",
+                "${workspaceFolder}/TestDateFormat.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -30,9 +30,8 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/src/Program/Program.csproj",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
+                "--project",
+                "${workspaceFolder}/TestDateFormat.sln"
             ],
             "problemMatcher": "$msCompile"
         },
@@ -64,6 +63,18 @@
                 "kind": "test",
                 "isDefault": true
             }
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/TestDateFormat.sln",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
         }
     ]
 }
